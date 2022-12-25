@@ -1,0 +1,32 @@
+<section class="section">
+    <figure class="main_element">
+        <div class="picture">
+            <img src="https://whm.wuffy.eu/pictures/whm.png" alt="">
+        </div>
+        <form>
+            <div class="group">
+                <input #accessCodeField type="text" (keyup)="validateInput()" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>AccessCode</label>
+            </div>
+        </form>
+        <button type="button" #openButton (click)="openPopup()" disabled>Verifizieren</button>
+    </figure>
+</section>
+<div #popupDiv class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h2>Tracking Addresse</h2>
+        </div>
+        <div class="popup-body">
+            <p>Hier ist deine Tracking Addresse</p>
+            <p #popupAccessCodeField></p>
+        </div>
+        <div class="popup-footer">
+            <button type="button" (click)="copyTrackingAddress()">Copy</button>
+            <button type="button" (click)="openTrackingAddress()">Link Öffnen</button>
+        </div>
+    </div>
+    <div #popupBackgroundDiv class="popup-background"></div>
+</div>

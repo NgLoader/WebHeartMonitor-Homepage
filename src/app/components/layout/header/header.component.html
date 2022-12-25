@@ -1,0 +1,31 @@
+<p>
+	<mat-toolbar color="primary">
+		<span>WebHeartMonitor</span>
+		<span class="header-spacer"></span>
+		<button mat-button [matMenuTriggerFor]="tutrial">
+			<h1>Tutorial</h1>
+		</button>
+		<mat-menu #tutrial="matMenu">
+			<button mat-menu-item (click)="openTutorialSetup()">Setup</button>
+			<button mat-menu-item (click)="openTutorialStreamlabs()">Streamlabs</button>
+		</mat-menu>
+
+		<button mat-icon-button [matMenuTriggerFor]="themes">
+			<mat-icon>format_color_fill</mat-icon>
+		</button>
+		<mat-menu #themes="matMenu">
+			<button mat-menu-item (click)="switchTheme('light-theme')">
+				<mat-icon>dialpad</mat-icon>
+				<span>Light</span>
+			</button>
+			<button mat-menu-item (click)="switchTheme('dark-theme')">
+				<mat-icon>dialpad</mat-icon>
+				<span>Dark</span>
+			</button>
+			<button mat-menu-item (click)="switchTheme('candy-theme')">
+				<mat-icon>dialpad</mat-icon>
+				<span>Candy</span>
+			</button>
+		</mat-menu>
+	</mat-toolbar>
+</p>
